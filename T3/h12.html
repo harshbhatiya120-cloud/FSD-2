@@ -1,0 +1,22 @@
+<html>
+    <head>
+      
+    </head>
+    <body>
+            <input type="text" onfocus="this.style.backgroundColor='yellow'">
+            <input type="text" onblur="this.style.backgroundColor='pink'">
+            <input type="text" oninput="this.value=this.value.toUpperCase()">
+            <input type="text" onchange="this.value=this.value.toUpperCase()">
+            <form action="#" onsubmit="fun()">
+                Enter name=<input type="text" name="fname" id="a">
+                <input type="submit" value="submit">
+            </form>
+            <script>
+                function fun()
+                {
+                    a=document.getElementById('a').value
+                    alert("welcome")
+                }
+            </script>
+    </body>
+</html>

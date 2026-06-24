@@ -1,0 +1,37 @@
+<!-- create a form that product discount and save button match following
+where user click save store the enterd value in localStorage after save display message
+and another button remove discount that removes only discount filed from localStorage and display -->
+<html>
+ 
+    <body>
+        <form action="#" onsubmit="pro()">
+        <h2>Shopping center</h2>
+        product:<input type="text" id="pro1">
+        <br>
+        price  :<input type="text" id="pri">
+        <br>
+        Discount:<input type="text" id="dis">
+        <br>
+        <input type="submit">
+    </form>
+    <button onclick="dis()">discount</button>
+    <p id="out"></p>
+        <script>
+         function pro() {
+            let productn=document.getElementById('pro1').value
+            let price=document.getElementById("pri").value
+            let discount=document.getElementById("dis").value
+            localStorage.setItem("fname",productn)
+            localStorage.setItem("price",price)
+            localStorage.setItem("dis",discount)
+            alert("save successfullll")
+         }
+         function dis(){
+            localStorage.removeItem('dis')
+            let p=localStorage.getItem("fname")
+            let p1= localStorage.getItem("price")
+            document.getElementById('out').innerHTML=`${p} <br> ${p1}`
+         }
+        </script>
+    </body>
+</html>

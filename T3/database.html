@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>LogIn</h2>
+        <input type="text" id="a">
+        <button onclick="save1()">save</button>
+        <button onclick="show1()">show</button>
+        <button onclick="clear1()">clear</button>
+        <p id="out"></p>
+        <script>
+           // localStorage.setItem("username","ABC")
+            //let data=localStorage.getItem("username")
+            //console.log(data)
+           // localStorage.setItem("username","par")
+           // localStorage.setItem("username1","xyz")
+           // localStorage.removeItem("username2")
+           // localStorage.clear()
+           /* sessionStorage.setItem('username',"abc")
+            let data=sessionStorage.getItem("username")
+            console.log(data)*/
+            function save1(){
+                let user=document.getElementById('a').value
+                localStorage.setItem("uname",user)
+                sessionStorage.setItem("uname",user)
+            }
+            function show1()
+            {
+                let luser=localStorage.getItem("uname")
+                let suser=sessionStorage.getItem("uname")
+                document.getElementById('out').innerHTML="Local:"+luser+"<br>session:"+suser;
+            }
+            function clear1()
+            {
+                localStorage.clear()
+                sessionStorage.clear()
+                document.getElementById('out').innerHTML="cleared!!"
+            }
+        </script>
+    </body>
+</html>

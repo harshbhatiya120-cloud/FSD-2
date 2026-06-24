@@ -1,0 +1,80 @@
+<html>
+    <head>
+       <script>
+        const add=(a,b)=>a+b
+        console.log(add(5,5))
+
+        const square =x=>x*x
+        console.log(square(5))
+
+        const fun=p=>`val=${p}`
+        console.log(fun(30))
+
+        const add1=(j,k)=>{return`${j+k}`}
+        console.log(`addition=${add(5,9)}`)
+
+        fun1=(val)=>"hello "+val
+        console.log(fun1("world"))
+
+        //rest
+        function fun2(a,b,...c){
+            console.log(a)
+            console.log(b)
+            console.log(c)
+            console.log(c.length)
+            console.log(c[2])
+            console.log(c.indexOf(4))
+            console.log(c.indexOf(1))
+        }
+        fun2(1,2,3,4,5)
+        const arr1=[3,2,1]
+        const arr2=[5,4]
+        const farr=[...arr1,...arr2]
+        console.log(farr)
+        console.log(farr.sort())
+        console.log(...farr)
+        console.log(Math.min(...farr))
+        console.log(Math.max(...farr))
+
+        function fun3(bg,tx,size="20px",fs="italic")
+        {
+            i=document.getElementById("a1")
+            i.style.color=tx;
+            i.style.backgroundColor=bg;
+            i.style.fontSize=size
+            i.style.fontStyle=fs
+        }
+        function warn()
+        {
+            alert('i am warning')
+            document.write('you read warning')
+        }
+        function conf()
+        {
+            let result=confirm('do you agree ?')
+            if(result==true)
+            {
+                document.write('user agree')
+                return true
+            }
+            else{
+                document.write('user disagree')
+                return false
+            }
+        }
+        function  p()
+        {
+            let info=prompt("enter the name","username")
+            document.write(`welcome ${info}`)
+        }
+       </script>
+    </head>
+    <body>
+        <div id="a1">hello</div>
+        <input type="submit" onclick="fun3('tomato','cyan')" value="click me">
+        <input type="button" value="alert box" onclick="warn()">
+
+        <input type="button" value="conform box" onclick="conf()">
+        <input type="button" value="useri/p" onclick="p()">
+    </body>
+</html>

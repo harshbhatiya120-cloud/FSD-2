@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="f1" onsubmit="fun()">
+            Data:<input type="text" name="data">
+            <input type="submit">
+            <script>
+                function fun()
+                {
+                    obj1=document.f1.data.value
+                    if(isNaN(obj1))
+                    {
+                        alert("enter number only")
+                    }
+                    else if(obj1.length!=4){
+                        alert("Enter 4 num only")
+                    }
+                    else
+                    {
+                        alert(obj1)
+                    }
+                }
+            </script>
+        </form>
+    </body>
+</html>

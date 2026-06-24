@@ -1,0 +1,27 @@
+<html>/
+    <body>
+        <script>
+            let order=new Promise((resolve,rejec)=>{
+                let success=true;
+               console.log("waiting.....") 
+                setTimeout(()=>{
+                    if(success){
+                        resolve("order complete")
+                    }
+                    else{
+                        reject("order fail")
+                    }
+                },5000)
+            })
+            console.log("order palaced")
+            order 
+                 .then(relsult=>console.log(relsult))
+                 .catch(error=>console.log(error))
+                 .finally(()=>console.log("process finished"))
+
+            setTimeout(()=>{
+                console.log("Excecute")
+            },2000) 
+        </script>
+    </body>
+</html>

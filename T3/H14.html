@@ -1,0 +1,25 @@
+<!-- write JavaScript one input field and empty button if field is empty alert will pop up with text  enter something otherwise it will show filled value -->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="f1" onsubmit="fun()">
+            Data:<input type="text" name="data">
+            <input type="submit">
+            <script>
+                function fun()
+                {
+                    obj1=document.f1.data.value
+                    if(obj1=="")
+                    {
+                        alert("enter something")
+                    }
+                    else{
+                        alert("welcome"+obj1)
+                    }
+                }
+            </script>
+        </form>
+    </body>
+</html>

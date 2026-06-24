@@ -1,0 +1,26 @@
+<!-- design a login form with following validation in password field:
+length is 8 and 1 special char   -->
+<html>
+    <head>
+
+    </head>
+    <body>
+        Enter something:<input type="text" id="a">
+        <input type="submit" onclick="fun()">
+        <script >
+            function fun()
+            {
+                pattern=/\W{8,}/
+                u=document.getElementById('a').value
+                if(pattern.test(u))
+                {
+                    alert("perfect")
+                }
+                else
+                {
+                   alert('not allowed')
+                }
+            }
+        </script>
+    </body>
+</html>

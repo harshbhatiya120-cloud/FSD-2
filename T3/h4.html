@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <p id="a">Hello</p>
+        <p class="b">Hello1</p>
+        <p class="b">Hello2</p>
+        
+        <script>
+            function fun()
+            {
+           document.getElementById('a').innerHTML="How are you"
+            }
+            function  fun2(){
+                let x=document.getElementsByClassName('b')
+                for (i=0;i<x.length;i++){
+                    x[i].innerHTML="i am applied on all"
+                }
+               // x[0].innerHTML="Loop require  to change all class innerHtml"
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="fun()" value="change">
+        <input type="button" onclick="fun2()" value="change1">
+    </body>
+</html>

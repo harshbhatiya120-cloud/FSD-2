@@ -1,0 +1,24 @@
+<!-- create 100x100 div having default text box 
+perform on mouse down,up event using funcation
+by clicling at the time of mousedown by color is yellow and a text is mouse press 
+on mouseup by color pink and text mouse release -->
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div onmouseover="fun(this)" onmouseout="fun2(this)" style="height:100px;width:100px">Hello </div>
+        <script>
+            function fun(e)
+            {
+                e.innerHTML='click pressed'
+                e.style.backgroundColor="cyan"
+            }
+            function fun2(e)
+            {
+                e.innerHTML='click released'
+                e.style.backgroundColor='pink'
+            }
+        </script>
+    </body>
+</html>

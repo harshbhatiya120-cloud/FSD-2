@@ -1,0 +1,43 @@
+<html>/
+    <body>
+        <script>
+            function fetchData(){
+            return new Promise((resolve,rejec)=>{   
+                
+               console.log("waiting.....") 
+                setTimeout(()=>{
+                    let success=true;
+                    if(success){
+                        resolve("order complete")
+                    }
+                    else{
+                        reject("order fail")
+                    }
+                },5000)
+            
+            })
+        }
+            console.log("order palaced")
+            async function getdata()
+            {
+                try{
+                    let result=await fetchData()
+                    console.log(result)
+                }
+                catch(error)
+                {
+                    console.log("error",error)
+                }
+            }
+            getdata()
+          /*  order 
+                 .then(relsult=>console.log(relsult))
+                 .catch(error=>console.log(error))
+                 .finally(()=>console.log("process finished"))
+
+            setTimeout(()=>{
+                console.log("Excecute")
+            },2000) */
+        </script>
+    </body>
+</html>

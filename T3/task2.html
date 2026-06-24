@@ -1,0 +1,35 @@
+<!-- You are given a dataset of student test scores.
+const students = [
+	{ name: 'Alice', scores: { math: 85, science: 90, history: 78 } },
+	{ name: 'Bob', scores: { math: 92, science: 88, history: 95 } },
+	{ name: 'Charlie', scores: { math: 70, science: 75, history: 80 } },
+	{ name: 'Diana', scores: { math: 95, science: 98, history: 93 } }
+];
+Write code to perform the following tasks:
+1. Find the student with the highest average score across all subjects.
+2. Return a new object containing only that student's name and their average score, formatted to two decimal places.
+You must calculate the average score for each student to find the highest, and your final result should be a single object.
+ -->
+ <html>
+    <head>
+        <script>
+            const students = [
+            { name: 'Alice', scores: { math: 85, science: 90, history: 78 } },
+            { name: 'Bob', scores: { math: 92, science: 88, history: 95 } },
+            { name: 'Charlie', scores: { math: 70, science: 75, history: 80 } },
+            { name: 'Diana', scores: { math: 95, science: 98, history: 93 } }
+        ];
+           let finalop={}
+           let maxAvg=0 
+           for(let s of students)
+           {
+            let avg=(s.scores.math+s.scores.science+s.scores.history)/3
+            if(avg>maxAvg){
+                maxAvg=avg
+                finalop={name:s.name,average:avg.toFixed(2)}
+            }
+           }
+           console.log(finalop)
+        </script>
+    </head>
+ </html>

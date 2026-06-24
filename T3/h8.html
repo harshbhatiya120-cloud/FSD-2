@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function fun(){
+                document.getElementById('a1').innerHTML='Hello'
+                document.querySelector('p').style.backgroundColor='tomato'
+            }
+            function fun1(x,y){
+                x.innerHTML=y
+            }
+        </script>
+        <p id="a1" onclick="fun()" style="background-color:aqua">click me</p>
+        <p id="a1" onclick="fun1(this,'How are youuu')"></p>
+        <p onclick="this.innerHTML='Hello'";this.style.background-color='aqua'>How are you</p>
+        <div onclick="this.style.color='tomato';this.innerHTML='Welcome 2026'">Good bye 2025</div>
+        <!-- onclick -->
+        <div onclick="this.innerHTML='Hello'">Hi</div>
+        <div onmouseover="this.style.color='tomato'"> I am on mouseover</div>
+        <div onmouseout="this.style.backgroundColor='cyan'">changed  onmouseout</div>
+        <div onmousedown="this.style.color='blue'">onmouse key press</div>
+        <div onmouseup="this.style.color='pink'">on mouse key release</div>
+    </body>
+</html>

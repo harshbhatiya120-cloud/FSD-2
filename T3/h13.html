@@ -1,0 +1,21 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form name="f1" onsubmit="fun()">
+            Firstname:<input type="text" id="a" name="fname" value="">
+            Lastname:<input type="text" name="lname" value="">
+            <input type="submit">
+        </form>
+        <script>
+            function fun()
+            {
+               // obj1=document.f1.fname.value
+                //document.write(obj1)
+                obj2=document.forms["f1"]
+                alert("length of form"+obj2.length)
+            }
+        </script>
+    </body>
+</html>

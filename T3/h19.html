@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        Enter something:<input type="text" id="a">
+        Enter something:<input type="password" id="b">
+        <input type="submit" onclick="fun()">
+        <script >
+            function fun()
+            {
+                pattern=/^_|^@|^\d/
+                u=document.getElementById('a').value
+                v=document.getElementById('b').value
+               if(v.length==0||u.length==0)
+               {
+                alert("cant not blank")
+               }
+            }
+        </script>
+    </body>
+</html>

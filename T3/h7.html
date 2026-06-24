@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+       
+    </head>
+    <body>
+        <img id="a1" src="images.jfif">
+        <!-- <button onclick="fun()">Toggle</button> -->
+        <script>
+            const i=document.querySelector('#a1')
+            i.onclick=()=>{
+                i.setAttribute('src',i.getAttribute("src")=="images.jfif"?"images1.jfif":"images.jfif")
+            }
+        </script>    
+    </body>
+</html>

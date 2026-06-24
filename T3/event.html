@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body onkeypress="kc(event)">
+        <select onchange="fun(event)">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+        </select>
+        <button onclick="fun1(event)">Hii</button>
+        <div style="width:100px;height:100px;background-color:tomato " onmousedown="fun2(event)">
+            
+        </div>
+        <script>
+            function fun(e)
+            {
+                alert(e.target.value,e.target.tagname)
+            }
+            function kc(e)
+            {
+                alert("key pressed :"+e.key)
+            }
+            function fun2(e)
+            {
+                val=e.button
+                switch(val)
+                {
+                    case 0:alert('left click')
+                        break;
+                    case 1:alert('middl click')
+                        break;
+                    case 2:alert('right click')
+                        break;
+                }
+            }
+            function stop(e)
+            {
+                e.preventDefault()
+                alert("form submission stopped")
+            }
+        </script>
+      <form onsubmit="stop(event)">
+        <input type="submit" value="submit">
+      </form>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- Enter something:<input type="text" id="a"> -->
+        <!-- <script>
+            let input=document.querySelector('#a')
+            input.addEventListener('keydown',(e)=>{
+                if(isNaN(e.key) && e.key!=="Backspace"){
+                    e.preventDefault()
+                }
+            })
+        </script> -->
+        Enter something:<input type="text" id="a">
+        <input type="submit" onclick="fun()">
+        <script >
+            function fun()
+            {
+                pattern=/\d/
+                u=document.getElementById('a').value
+                if(pattern.test(u))
+                {
+                    alert("perfect")
+                }
+                else
+                {
+                   alert('not allowed')
+                }
+            }
+        </script>
+    </body>
+</html>

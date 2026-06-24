@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <p id="p1" title="Demo text">Hello</p>
+        <img id="img1">
+        <script>
+            let i=0
+            function fun()
+            {
+
+                if(i%2==0){
+                document.getElementById("img1").setAttribute("src","images.jfif")
+                i+=1;
+                }
+                else{
+                    document.getElementById("img1").setAttribute("src","images1.jfif")
+                i+=1;
+                }
+                
+            }
+            function fun2()
+            {
+                alert(document.getElementById("p1").getAttribute("title"))
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="fun()" value="change">
+     </body> 
+</html>

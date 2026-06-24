@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <p>Para1</p>
+        <p>para2</p>
+        <p>para3</p>
+        <script>
+            function fun(){
+            let x=document.querySelectorAll('p')
+            for (i=0;i<x.length;i++)
+            {
+                x[i].style.fontSize="20"
+                x[i].style.backgroundColor='cyan'
+            }
+           document.querySelector('p').style.backgroundColor='tomato'
+        }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="fun()" value="change">
+    </body>
+</html>
