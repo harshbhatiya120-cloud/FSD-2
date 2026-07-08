@@ -1,4 +1,5 @@
 const mg=require("mongoose")
+
 mg.connect("mongodb://127.0.0.1:27017/mgb6").then(()=>{
     console.log("success")
 }).catch((e)=>{
@@ -19,8 +20,11 @@ const userschema=new mg.Schema({
     age:{type:Number,min:18,max:45},
     role:{type:String,enum:['user','admin'],default:'user'}
 })
+
 mg.pluralize(null);
+
 const mymodel=mg.model('user',userschema)
+
 const myfun=async()=>{
     try{
         const newuser=new mymodel({
@@ -36,4 +40,5 @@ const myfun=async()=>{
         console.log(e)
     }
 }
+
 myfun();

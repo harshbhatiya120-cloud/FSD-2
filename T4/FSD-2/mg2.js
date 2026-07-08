@@ -13,7 +13,9 @@ var myschema = new mg.Schema({
     active: Boolean,
     doj: { type: Date, default: new Date().toLocaleDateString() },
 }, { strict: false, versionKey: false })
+
 mg.pluralize(null);
+
 const mymodel = new mg.model('person', myschema)
 
 const myfun = async () => {
@@ -29,4 +31,5 @@ const myfun = async () => {
         console.log(e)
     }
 }
+
 myfun();
